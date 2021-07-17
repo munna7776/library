@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Library Web App</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-xxl navbar-dark bg-dark" aria-label="Seventh navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand h1" href="#"><strong>UIT</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl"
+            aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExampleXxl">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Library</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input id="searchTxt" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div id="message"></div>
+    <div class="container my-3">
+      <h1 class="display-5 fw-bold">UIT Library</h1>
+      <hr>
+      <form id="libraryForm">
+        <div class="row mb-3">
+          <label for="bookName" class="col-sm-2 col-form-label">Name of Book</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="bookName" placeholder="Name of a Book">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="author" class="col-sm-2 col-form-label">Author</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="auhtorName" placeholder="Author's Name">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="rollNo" class="col-sm-2 col-form-label">Roll No.</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="rollNo" placeholder="Roll Number">
+          </div>
+        </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Branch</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="cse" value="cse" checked>
+              <label class="form-check-label" for="cse">
+                C.S.E.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="it" value="it">
+              <label class="form-check-label" for="it">
+                I.T.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="ece" value="ece">
+              <label class="form-check-label" for="ece">
+                E.C.E.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="ee" value="ee">
+              <label class="form-check-label" for="ee">
+                E.E.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="ce" value="ce">
+              <label class="form-check-label" for="ce">
+                C.E.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="aeie" value="aeie">
+              <label class="form-check-label" for="aeie">
+                A.E.I.E.
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </form>
+
+      <div id="table" class="my-3">
+        <h1>List of Issued Books</h1>
+        <table class="table table-success table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name of Book</th>
+              <th scope="col">Author</th>
+              <th scope="col">Roll No.</th>
+              <th scope="col">Branch</th>
+            </tr>
+          </thead>
+          <tbody id="tablebody">
+          </tbody>
+        </table>
+
+      </table>
+      </div>
+    </div>
+  
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="index.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
